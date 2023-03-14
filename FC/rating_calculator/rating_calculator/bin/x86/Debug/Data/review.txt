@@ -1,0 +1,14 @@
+﻿Szuper.	1
+Nem jó .	0
+Nagyon rossz.	0
+Imádtam.	1
+Kiváló.	1
+okés	1
+Mérges vagyok és visssza akarom kapni a pénzem.	0
+Nem éreztem annyira jónak.	0
+Remek élmény.	1
+Kitűnő.	1
+Nem tölteném le újra.	0
+It was just bad.	0
+I loved it.	1
+

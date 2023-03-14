@@ -1,0 +1,3 @@
+D:\Új mappa\rating_calculator\rating_calculator\obj\Debug\rating_calculator.csprojAssemblyReference.cache
+D:\Új mappa\rating_calculator\rating_calculator\obj\Debug\rating_calculator.Properties.Resources.resources
+D:\Új mappa\rating_calculator\rating_calculator\obj\Debug\rating_calculator.csproj.GenerateResource.cache
