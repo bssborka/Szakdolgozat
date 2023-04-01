@@ -5,17 +5,19 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace rating_calculator.Model
 {
 	class ConnectToDB
 	{
-		readonly string kapcs_string;
+		string kapcs_string;
 		MySqlConnection kapcs_mysql;
 		readonly MySqlDataAdapter adapter_mysql = new MySqlDataAdapter();
 		public ConnectToDB()
 		{
-			kapcs_string = "datasource=127.0.0.1;database=fitclock;uid=root;pwd=";
+			kapcs_string = "datasource=127.0.0.1;database=fitclock;uid=admin;pwd=CvvdDNnRTdwa";
+			
 		}
 
 		public bool Megnyitas()
@@ -37,8 +39,6 @@ namespace rating_calculator.Model
 			try
 			{
 				kapcs_mysql.Close();
-				kapcs_mysql.Dispose();
-				adapter_mysql.Dispose();
 				return true;
 			}
 			catch (Exception)
@@ -55,7 +55,6 @@ namespace rating_calculator.Model
 				{
 					MySqlCommand parancs = new MySqlCommand(LKS, kapcs_mysql);
 					string command = parancs.ExecuteScalar().ToString();
-					parancs.Dispose();
 					return command;
 				}
 				catch (Exception H)
@@ -80,7 +79,6 @@ namespace rating_calculator.Model
 					{
 						valaszlista.Add(olvaso[0].ToString());
 					}
-					parancs.Dispose();
 				}
 				catch (Exception ex)
 				{
@@ -125,7 +123,6 @@ namespace rating_calculator.Model
 						Connection = kapcs_mysql
 					};
 					parancs.ExecuteNonQuery();
-					parancs.Dispose();
 				}
 				catch (Exception) { }
 			}
@@ -143,7 +140,6 @@ namespace rating_calculator.Model
 						Connection = kapcs_mysql
 					};
 					parancs.ExecuteNonQuery();
-					parancs.Dispose();
 				}
 				catch (Exception) { }
 			}

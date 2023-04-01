@@ -36,8 +36,14 @@ namespace rating_calculator.View
 		public Comment()
 		{
 			InitializeComponent();
-			this.CenterToScreen();
 			CommentStyle();
+			Screen screen = Screen.FromControl(this);
+			Rectangle workingArea = screen.WorkingArea;
+			this.Location = new Point()
+			{
+				X = Math.Max(workingArea.X, workingArea.X + (workingArea.Width - 800) / 2),
+				Y = Math.Max(workingArea.Y, workingArea.Y + (workingArea.Height - 400) / 2)
+			};			
 			BackLb.Click += BackLb_Click;
 		}
 		protected override void WndProc(ref Message m)

@@ -102,7 +102,7 @@ namespace rating_calculator.View.styles
 			loginForm.Region = Region.FromHrgn(RoundedRect.CreateRoundRectRgn(0, 0, 300, 450, 25, 25));
 			loginForm.FormBorderStyle = FormBorderStyle.None;
 			loginForm.BackColor = Color.FromArgb(21, 41, 50);
-
+			
 		}
 	}
 }

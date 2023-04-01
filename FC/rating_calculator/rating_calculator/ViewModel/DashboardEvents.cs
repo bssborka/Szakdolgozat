@@ -34,9 +34,10 @@ namespace rating_calculator.ViewModel
 		}
 
 		public void UpdateUserCount()
-		{
+		{			
 			int users = Convert.ToInt32(db.Szamot_ad("SELECT COUNT(userId) FROM users;"));
 			db.AddUserCount(users);
+			db.Ddl_dml("DELETE FROM graph WHERE numberOfUsers=0");	
 		}
 		public void Quit() => Application.Exit();
 		public void Minimize(Form form) => form.WindowState = FormWindowState.Minimized;

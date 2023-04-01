@@ -38,7 +38,13 @@ namespace rating_calculator
 		{
 			InitializeComponent();
 
-			this.CenterToScreen();
+			Screen screen = Screen.FromControl(this);
+			Rectangle workingArea = screen.WorkingArea;
+			this.Location = new Point()
+			{
+				X = Math.Max(workingArea.X, workingArea.X + (workingArea.Width - 300) / 2),
+				Y = Math.Max(workingArea.Y, workingArea.Y + (workingArea.Height - 450) / 2)
+			};
 			LoginStyle();
 
 			LoginBtn.Click += LoginBtn_Click;

@@ -39,9 +39,16 @@ namespace rating_calculator.View
 		public Registration()
 		{
 			InitializeComponent();
-
-			this.CenterToScreen();
 			RegistrationStyle();
+			Screen screen = Screen.FromControl(this);
+			Rectangle workingArea = screen.WorkingArea;
+			this.Location = new Point()
+			{
+				X = Math.Max(workingArea.X, workingArea.X + (workingArea.Width - 300) / 2),
+				Y = Math.Max(workingArea.Y, workingArea.Y + (workingArea.Height - 450) / 2)
+			};
+
+			
 			
 			RegisterBtn.Enabled = false;
 			ErrorLb.Visible = false;

@@ -27,7 +27,15 @@ namespace rating_calculator.View
 		public ErrorLog()
 		{
 			InitializeComponent();
+			
 			ErrorLogStyle();
+			Screen screen = Screen.FromControl(this);
+			Rectangle workingArea = screen.WorkingArea;
+			this.Location = new Point()
+			{
+				X = Math.Max(workingArea.X, workingArea.X + (workingArea.Width - 400) / 2),
+				Y = Math.Max(workingArea.Y, workingArea.Y + (workingArea.Height - 200) / 2)
+			};
 			Back.Click += Back_Click;
 		}
 

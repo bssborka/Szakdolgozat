@@ -44,9 +44,14 @@ namespace rating_calculator.View
 		public Dashboard()
 		{
 			InitializeComponent();
-
-			this.CenterToScreen();
 			DashboardStyle();
+			Screen screen = Screen.FromControl(this);
+			Rectangle workingArea = screen.WorkingArea;
+			this.Location = new Point()
+			{
+				X = Math.Max(workingArea.X, workingArea.X + (workingArea.Width - 800) / 2),
+				Y = Math.Max(workingArea.Y, workingArea.Y + (workingArea.Height - 600) / 2)
+			};		
 			de.UpdateUserCount();
 			LogoutBtn.Click += LogoutBtn_Click;
 			CommentBtn.Click += CommentBtn_Click;
