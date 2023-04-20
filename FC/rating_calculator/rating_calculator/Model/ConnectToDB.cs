@@ -16,7 +16,7 @@ namespace rating_calculator.Model
 		readonly MySqlDataAdapter adapter_mysql = new MySqlDataAdapter();
 		public ConnectToDB()
 		{
-			kapcs_string = "datasource=127.0.0.1;database=fitclock;uid=admin;pwd=CvvdDNnRTdwa";
+			kapcs_string = "datasource=127.0.0.1;database=fitclock;uid=root;pwd=";
 			
 		}
 
