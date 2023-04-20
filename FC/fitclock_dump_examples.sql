@@ -122,7 +122,7 @@ INSERT INTO `genders` (`genderId`, `gender`) VALUES
 
 CREATE TABLE `graph` (
   `numberOfUsers` int(11) NOT NULL,
-  `´date´` date DEFAULT NULL
+  `date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 -- --------------------------------------------------------
