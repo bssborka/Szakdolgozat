@@ -212,6 +212,7 @@ CREATE TABLE `workout` (
   `userId` tinyint(2) NOT NULL,
   `dateOfExercise` date DEFAULT NULL,
   `exerciseList` varchar(50) COLLATE utf8_hungarian_ci NOT NULL
+  `exerciseTimeList` varchar(50) COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
